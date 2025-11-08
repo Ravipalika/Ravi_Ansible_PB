@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.23.167
+  connection: ssh
+
+
+  tasks:
+    - name: installing GIT
+      yum: name=java-1.8.0 state=present
+...

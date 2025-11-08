@@ -1,0 +1,31 @@
+---
+- hosts: DEV
+  connection: ssh
+  tasks:
+    - name: creating a file in dev
+      file:
+        path: "TULASI"
+        state: touch
+    - name: add data to that file
+      copy:
+        dest: "TULASI"
+        content: |
+          Hi I am TULASI DEVI NURUKURTHI
+          WIFE OF RAVI
+          BEAUTICIAN
+          I HOPE you are all well
+    - name: create a folder
+      file:
+        path: "RAGAHAVA"
+        state: directory
+    - name: create file in RAGAHAVA
+      file:
+        path: "/root/RAGAHAVA/VIJAYA"
+        state: touch
+        mode: 777
+    - name: change owner
+      file:
+        path: "TULASI"
+        owner: "Ravi"
+        group: fam
+...

@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: ssh
+  tasks:
+    - name: installing web
+      yum: name=httpd state=present
+    - name: starting server
+      service: name=httpd state=started
+...

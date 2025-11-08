@@ -1,0 +1,7 @@
+---
+- hosts: all
+  connection: ssh
+  tasks:
+    - name: installing java17
+      command: dnf install java-17-amazon-corretto -y
+...

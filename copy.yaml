@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: ssh
+  tasks:
+    - name: copying a file
+      copy:
+       src: variable.yml
+       dest: "/root"
+...

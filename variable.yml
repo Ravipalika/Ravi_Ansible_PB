@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: ssh
+  
+  vars:
+    soft: tree
+    ware: java-1.8.0-openjdk
+  tasks:
+    - name: install tree
+      yum: name={{soft}} state=present
+    - name: install java1
+      yum: name={{ware}} state=present

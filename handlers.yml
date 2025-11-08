@@ -1,0 +1,10 @@
+---
+- hosts: TEST
+  connection: ssh
+  tasks:
+    - name: install maven
+      yum: name=maven state=present
+      notify: start maven
+  handlers:
+    - name: start maven
+      service: name=maven state=started
